@@ -1,0 +1,18 @@
+console.log("test no: 11");
+console.log("Is \"10\"==10, I predict true");
+console.log("10" == 10);
+console.log("test no: 12");
+console.log("Is \"10\"+10==20, I predict false");
+console.log("10" + 10 == 20);
+console.log("test no: 13");
+console.log("Is \"Faisal\".toLowerCase()==\"faisal\", I predict true");
+console.log("Faisal".toLowerCase() == "faisal");
+console.log("test no: 14");
+console.log("Is 10 >=9 I predict true");
+console.log(10 >= 9);
+console.log("test no: 15");
+console.log("Is (10==10&&10>10) I predict false");
+console.log(10 == 10 && 10 > 10);
+console.log("test no: 16");
+console.log("Is [1,2].includes(10) I predict false");
+console.log([1, 2].includes(10));
