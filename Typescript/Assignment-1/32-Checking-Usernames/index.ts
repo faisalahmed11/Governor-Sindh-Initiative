@@ -11,7 +11,7 @@ const currentUsers: User[] = [
   { username: "salman", isAdmin: true },
 ];
 const newUsers: User[] = [
-  { username: "elon", isAdmin: false },
+  { username: "Elon", isAdmin: false },
   { username: "sam", isAdmin: true },
   { username: "rafique", isAdmin: true },
   { username: "faisalahmed", isAdmin: true },
@@ -19,15 +19,14 @@ const newUsers: User[] = [
   { username: "ahsan", isAdmin: true },
 ];
 
-newUsers.forEach((user) => {
-  let checkingUser = user.username;
-  currentUsers.forEach((cUser) => {
-    if (checkingUser.includes(/cUser.username/i)) {
-    }
-  });
-  if (currentUsers.includes(user)) {
-    console.log(`${user.username} already exists`);
+newUsers.forEach((userObj) => {
+  let username = userObj.username.toLowerCase();
+  let exists = currentUsers.some(
+    (userObj) => userObj.username.toLowerCase() === username
+  );
+  if (exists) {
+    console.log(username + " is not available");
   } else {
-    console.log(`${user.username} is available`);
+    console.log(username + " is available");
   }
 });

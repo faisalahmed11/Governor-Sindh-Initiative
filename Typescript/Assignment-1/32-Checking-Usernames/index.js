@@ -7,18 +7,20 @@ var currentUsers = [
     { username: "salman", isAdmin: true },
 ];
 var newUsers = [
-    { username: "elon", isAdmin: false },
+    { username: "Elon", isAdmin: false },
     { username: "sam", isAdmin: true },
     { username: "rafique", isAdmin: true },
     { username: "faisalahmed", isAdmin: true },
     { username: "anas", isAdmin: true },
     { username: "ahsan", isAdmin: true },
 ];
-newUsers.forEach(function (user) {
-    if (currentUsers.includes(user)) {
-        console.log("".concat(user.username, " already exists"));
+newUsers.forEach(function (userObj) {
+    var username = userObj.username.toLowerCase();
+    var exists = currentUsers.some(function (userObj) { return userObj.username.toLowerCase() === username; });
+    if (exists) {
+        console.log(username + " is not available");
     }
     else {
-        console.log("".concat(user.username, " is available"));
+        console.log(username + " is available");
     }
 });
