@@ -7,12 +7,7 @@ var newGuests = ["Abdul Shakoor", "Abdul Basit", "Aamir Mashori"];
 // removing ones not comming and adding new ones.
 var updatedGuests = myGuest
     .filter(function (name) {
-    var nameComming = true;
-    notCommingGuests.forEach(function (notCommingName) {
-        if (name === notCommingName)
-            nameComming = false;
-    });
-    return nameComming;
+    return !notCommingGuests.includes(name);
 })
     .concat(newGuests);
 //  adding one new guest at the beginning.

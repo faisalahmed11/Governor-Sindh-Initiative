@@ -6,6 +6,7 @@ console.log(placesList);
 const orderedList = [...placesList].sort();
 console.log("Ordered List");
 console.log(orderedList);
+
 // printing original list
 console.log("Original List");
 console.log(placesList);

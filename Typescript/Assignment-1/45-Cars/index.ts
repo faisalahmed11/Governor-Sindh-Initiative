@@ -1,8 +1,26 @@
-interface CarInfo {
+interface Car {
   manufacturer: string;
-  modelName: string;
+  model: string;
 }
-const carInfo = (manufacturer: string, modelName: string, ...args): CarInfo => {
-  args.lenght;
-  return { manufacturer, modelName };
-};
+
+function createCar(
+  manufacturer: string,
+  model: string,
+  ...optionalDetails: { key: string; value: any }[]
+): {} {
+  let car = { manufacturer, model };
+  optionalDetails.forEach((obj) => {
+    car = { ...car, ...{ [obj.key]: obj.value } };
+  });
+
+  return car;
+}
+
+// Example usage
+const myCar = createCar(
+  "Toyota",
+  "Camry",
+  { key: "color", value: "red" },
+  { key: "feature", value: "sunroof" }
+);
+console.log(myCar);

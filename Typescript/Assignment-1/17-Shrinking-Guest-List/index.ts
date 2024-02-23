@@ -8,11 +8,7 @@ const newGuests = ["Abdul Shakoor", "Abdul Basit", "Aamir Mashori"];
 // removing ones not comming and adding new ones.
 const updatedGuests = myGuest
   .filter((name) => {
-    let nameComming = true;
-    notCommingGuests.forEach((notCommingName) => {
-      if (name === notCommingName) nameComming = false;
-    });
-    return nameComming;
+    return !notCommingGuests.includes(name);
   })
   .concat(newGuests);
 
