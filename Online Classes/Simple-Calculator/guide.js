@@ -19,7 +19,7 @@ it allows execute commands from packages in the npm registry without installing 
  A collection of common interactive command line user interfaces.
 
 * add #! /usr/bin/env node
- at the top of the main file, for making it executable.
+ at the top of the main file, for making it executable, it is also called as shibang.
 
 * add "bin": "index.js",
  inside the package.json
@@ -34,8 +34,17 @@ it allows execute commands from packages in the npm registry without installing 
  * make sure to have a unique package name.
 to avoid conflict with other packages.
 
+! make sure to compile your ts file.
+
 * npm publish
 run this command on the terminal to publish the package on the npmjs.com
 
+. to rebublish the package you need to increase the version of the package.
 
+
+, npm Versions
+1.0.0
+1.0.1 for bug fixes
+1.1.0 for minor features
+2.0.0 for major features.
  */

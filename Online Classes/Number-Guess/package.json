@@ -1,0 +1,22 @@
+{
+  "name": "gsit-number-guess",
+  "version": "1.0.0",
+  "description": "This is a simple number guessing game. A Governor Sindh Initiative's Online Project.",
+  "main": "index.js",
+  "type": "module",
+  "bin": "index.js",
+  "publishConfig":{
+    "access":"public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Faisal Ahmed",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.2.16"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}
